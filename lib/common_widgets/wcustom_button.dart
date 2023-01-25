@@ -1,16 +1,14 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:linkedin_clon/consts/consts.dart';
 
-import '../consts/consts.dart';
-
-class CustomButton extends StatelessWidget {
+class WcustomButton extends StatelessWidget {
   final Color? bgColor;
   final Color? textColor;
   final Color? borderColor;
   String? title;
   final VoidCallback? onPress;
   final String? icon;
-
-  CustomButton(
+  WcustomButton(
       {super.key,
       this.title = "Join now",
       this.onPress,
@@ -23,14 +21,14 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.maxFinite,
-      height: 55.h,
+      height: 80.h,
       child: ElevatedButton(
           style: ButtonStyle(
               shadowColor: MaterialStateProperty.all(greyColor),
               backgroundColor: MaterialStateProperty.all<Color>(bgColor!),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.r),
+                      borderRadius: BorderRadius.circular(40.r),
                       side: BorderSide(color: borderColor!)))),
           onPressed: onPress,
           child: Row(
@@ -39,11 +37,11 @@ class CustomButton extends StatelessWidget {
               icon == null
                   ? const SizedBox()
                   : SizedBox(
-                      width: 30.w,
+                      width: 10.w,
                       child: Image.asset(
                         icon!,
-                        width: 25.w,
-                        height: 25.h,
+                        width: 30.w,
+                        height: 30.h,
                       ),
                     ),
               Text(
