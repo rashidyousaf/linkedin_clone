@@ -1,10 +1,7 @@
-import 'dart:js_util';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:linkedin_clon/common_widgets/post_widget.dart';
-import 'package:linkedin_clon/common_widgets/wcustom_button.dart';
 import 'package:linkedin_clon/common_widgets/wcustom_container.dart';
 import 'package:linkedin_clon/common_widgets/wcustom_textfield.dart';
+import 'package:linkedin_clon/common_widgets/wnotifications_widget.dart';
 import 'package:linkedin_clon/common_widgets/wpost_widget.dart';
 import 'package:linkedin_clon/consts/consts.dart';
 import 'package:linkedin_clon/views/others_screen/home_screen.dart';
@@ -633,17 +630,377 @@ class _BottomNavigationState extends State<BottomNavigation>
                   ),
                 )),
               ),
-              Container(
-                color: white2Color,
+              // this portion for my network
+
+              Scaffold(
+                backgroundColor: wbgColor,
+                body: SingleChildScrollView(
+                  child: Padding(
+                      padding:
+                          EdgeInsets.only(top: 30.h, left: 25.w, right: 25.w),
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(children: [
+                              SizedBox(
+                                width: 120.w,
+                                height: 650.h,
+                                child: WCustomContainer(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          height: 10.h,
+                                        ),
+                                        Text(
+                                          "Manage my network",
+                                          style: TextStyle(
+                                              fontSize: 25.sp,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.group,
+                                              size: 50.sp,
+                                              color: btextColor,
+                                            ),
+                                            SizedBox(
+                                              width: 3.w,
+                                            ),
+                                            Text(
+                                              "Connections",
+                                              style: TextStyle(
+                                                  fontSize: 24.sp,
+                                                  color: btextColor),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.contact_mail,
+                                              size: 40.sp,
+                                              color: btextColor,
+                                            ),
+                                            SizedBox(
+                                              width: 3.w,
+                                            ),
+                                            Text(
+                                              "Contacts",
+                                              style: TextStyle(
+                                                  fontSize: 24.sp,
+                                                  color: btextColor),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.groups,
+                                              size: 50.sp,
+                                              color: btextColor,
+                                            ),
+                                            SizedBox(
+                                              width: 3.w,
+                                            ),
+                                            Text(
+                                              "Groups",
+                                              style: TextStyle(
+                                                  fontSize: 24.sp,
+                                                  color: btextColor),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.calendar_month,
+                                              size: 50.sp,
+                                              color: btextColor,
+                                            ),
+                                            SizedBox(
+                                              width: 3.w,
+                                            ),
+                                            Text(
+                                              "Events",
+                                              style: TextStyle(
+                                                  fontSize: 24.sp,
+                                                  color: btextColor),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.note,
+                                              size: 50.sp,
+                                              color: btextColor,
+                                            ),
+                                            SizedBox(
+                                              width: 3.w,
+                                            ),
+                                            Text(
+                                              "Pages",
+                                              style: TextStyle(
+                                                  fontSize: 24.sp,
+                                                  color: btextColor),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.newspaper,
+                                              size: 50.sp,
+                                              color: btextColor,
+                                            ),
+                                            SizedBox(
+                                              width: 3.w,
+                                            ),
+                                            Text(
+                                              "Newsletters",
+                                              style: TextStyle(
+                                                  fontSize: 24.sp,
+                                                  color: btextColor),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.tag,
+                                              size: 50.sp,
+                                              color: btextColor,
+                                            ),
+                                            SizedBox(
+                                              width: 3.w,
+                                            ),
+                                            Text(
+                                              "Hashtags",
+                                              style: TextStyle(
+                                                  fontSize: 24.sp,
+                                                  color: btextColor),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            SizedBox(
+                              width: 250.w,
+                              height: 200,
+                              child: WCustomContainer(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Invitations",
+                                            style: TextStyle(
+                                                fontSize: 25.sp,
+                                                color: btextColor),
+                                          ),
+                                          const Spacer(),
+                                          Text(
+                                            "Manage",
+                                            style: TextStyle(
+                                                fontSize: 25.sp,
+                                                color: btextColor),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 20.h,
+                                      ),
+                                      const Divider(),
+                                      SizedBox(
+                                        height: 20.h,
+                                      ),
+                                      Row(
+                                        children: [
+                                          CircleAvatar(
+                                            maxRadius: 50.sp,
+                                          ),
+                                          SizedBox(
+                                            width: 10.h,
+                                          ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Aglena Jhoe",
+                                                style: TextStyle(
+                                                    fontSize: 25.sp,
+                                                    fontWeight: FontWeight.w700,
+                                                    color: blackColor),
+                                              ),
+                                              Text(
+                                                "react js developer",
+                                                style: TextStyle(
+                                                    fontSize: 20.sp,
+                                                    color: btextColor),
+                                              ),
+                                            ],
+                                          ),
+                                          const Spacer(),
+                                          Text(
+                                            "Ignore",
+                                            style: TextStyle(
+                                                fontSize: 25.sp,
+                                                color: btextColor),
+                                          ),
+                                          SizedBox(
+                                            width: 10.w,
+                                          ),
+                                          Text(
+                                            "Accept",
+                                            style: TextStyle(
+                                                fontSize: 25.sp,
+                                                color: blueColor),
+                                          ),
+                                          SizedBox(
+                                            width: 20.w,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            )
+                          ])),
+                ),
               ),
               Container(
-                color: blueColor,
+                color: wbgColor,
+                child: Center(
+                  child: Text(
+                    "Not found!",
+                    style: TextStyle(fontSize: 25.sp, color: btextColor),
+                  ),
+                ),
               ),
               Container(
-                color: blackColor,
+                color: wbgColor,
+                child: Center(
+                  child: Text(
+                    "empaty!",
+                    style: TextStyle(fontSize: 25.sp, color: btextColor),
+                  ),
+                ),
               ),
               Container(
-                color: greyColor,
+                color: wbgColor,
+                child: SingleChildScrollView(
+                  child: Padding(
+                      padding:
+                          EdgeInsets.only(top: 30.h, left: 25.w, right: 25.w),
+                      child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(children: [
+                              SizedBox(
+                                width: 100.w,
+                                height: 150.h,
+                                child: WCustomContainer(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          height: 10.h,
+                                        ),
+                                        Text(
+                                          "Manage your notifications",
+                                          style: TextStyle(
+                                              fontSize: 25.sp,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        Text(
+                                          "View Settings",
+                                          style: TextStyle(
+                                              fontSize: 25.sp,
+                                              color: blueColor),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ]),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            SizedBox(
+                              width: 250.w,
+                              child: WCustomContainer(
+                                child: Column(
+                                  children: [
+                                    WNotificationsWidget(),
+                                    WNotificationsWidget(),
+                                    WNotificationsWidget()
+                                  ],
+                                ),
+                              ),
+                            )
+                          ])),
+                ),
               ),
             ]));
       }
